@@ -10,3 +10,6 @@ All breaking changes will be documented in this page.
 *No changes at the moment*
 
 ---
+
+## 0.1.0 (beta) - 2018-03-23
+  - Initial release
