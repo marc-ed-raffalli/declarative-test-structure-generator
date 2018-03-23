@@ -1,5 +1,7 @@
 'use strict';
 
-module.exports = () => {
+const TestRunner = require('./src/TestRunner');
 
+module.exports = (testSuiteDefinition, config) => {
+  TestRunner.run(testSuiteDefinition, config);
 };
