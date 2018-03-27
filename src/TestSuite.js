@@ -18,12 +18,12 @@ const debug = require('debug')('declarative-test-structure-generator'),
 
 class TestSuite extends TestBlock {
 
-  constructor(definition = {}, config) {
-    super(definition, config);
+  constructor(definition = {}) {
+    super(definition);
 
     this.tests = Array.isArray(this.definition.tests)
-      ? Test.generate(this.definition.tests, config)
-      : TestSuite.generate(this.definition.tests, config);
+      ? Test.generate(this.definition.tests)
+      : TestSuite.generate(this.definition.tests);
   }
 
   get before() {
@@ -42,9 +42,9 @@ class TestSuite extends TestBlock {
     return hookGetter(this.definition.afterEach);
   }
 
-  static generate(def = {}, config) {
+  static generate(def = {}) {
     return Object.keys(def)
-      .map(key => new TestSuite({name: key, ...def[key]}, config));
+      .map(key => new TestSuite({name: key, ...def[key]}));
   }
 
   getRunTestBlock() {

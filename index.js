@@ -2,6 +2,8 @@
 
 const TestRunner = require('./src/TestRunner');
 
-module.exports = (testSuiteDefinition, config) => {
-  TestRunner.run(testSuiteDefinition, config);
+module.exports = {
+  run: testSuiteDefinition => {
+    TestRunner.run(testSuiteDefinition);
+  }
 };

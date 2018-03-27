@@ -4,17 +4,12 @@ const debug = require('debug')('declarative-test-structure-generator');
 
 class TestBlock {
 
-  constructor(definition = {}, config = {}) {
+  constructor(definition = {}) {
     this._definition = definition;
-    this._config = config;
   }
 
   get definition() {
     return this._definition;
-  }
-
-  get config() {
-    return this._config;
   }
 
   get name() {

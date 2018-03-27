@@ -11,10 +11,9 @@ describe('TestBlock', () => {
 
   describe('constructor', () => {
 
-    it('defaults to config={}, skip=false, only=false', () => {
+    it('defaults to skip=false, only=false', () => {
       testBlock = new TestBlock();
 
-      expect(testBlock.config).to.deep.equal({});
       expect(testBlock.only).to.be.false;
       expect(testBlock.skip).to.be.false;
     });

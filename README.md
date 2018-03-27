@@ -40,7 +40,7 @@ npm i -D declarative-test-structure-generator
 ```js
 const testGen = require('declarative-test-structure-generator');
 
-testGen({
+testGen.run({
   'Read access': {
     tests: [
       {
@@ -114,7 +114,7 @@ see [run only / skip](#run-only-/-skip) for more details.
 The test suite definition allows for nested structure:
 
 ```js
-testGen(server, {
+testGen.run(server, {
   'Root level': {
     'Test suite lvl 1': {
       tests: [{

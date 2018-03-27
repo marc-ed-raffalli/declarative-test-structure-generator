@@ -1,14 +1,11 @@
 'use strict';
 
-const TestSuite = require('./TestSuite'),
-  TestConfig = require('./TestConfig');
+const TestSuite = require('./TestSuite');
 
 class TestRunner {
 
-  static run(testSuiteDefinition = {}, config) {
-    config = TestConfig.make(config);
-
-    TestSuite.generate(testSuiteDefinition, config)
+  static run(testSuiteDefinition = {}) {
+    TestSuite.generate(testSuiteDefinition)
       .forEach(testSuite => testSuite.run());
   }
 

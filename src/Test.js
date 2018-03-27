@@ -4,13 +4,13 @@ const TestBlock = require('./TestBlock');
 
 class Test extends TestBlock {
 
-  constructor(definition = {}, config) {
-    super(definition, config);
+  constructor(definition = {}) {
+    super(definition);
   }
 
-  static generate(def = {}, config) {
+  static generate(def = {}) {
     return Object.keys(def)
-      .map(key => new Test(def[key], config));
+      .map(key => new Test(def[key]));
   }
 
   getRunTestBlock() {
