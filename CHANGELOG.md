@@ -11,6 +11,11 @@ All breaking changes will be documented in this page.
 
 ---
 
+## 0.2.1 (beta) - 2018-03-28
+
+### Changes
+  - Updated `repository` and `bugs` section in `package.json`
+
 ## 0.2.0 (beta) - 2018-03-27
 
 ### BREAKING CHANGES
