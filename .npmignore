@@ -1,0 +1,12 @@
+.idea
+
+.nyc_output
+coverage
+
+*.log
+
+.editorconfig
+.eslintrc
+.travis.yml
+mocha.opts
+src/*.test.js
