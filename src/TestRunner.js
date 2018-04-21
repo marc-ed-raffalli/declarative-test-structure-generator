@@ -6,7 +6,7 @@ class TestRunner {
 
   static run(testSuiteDefinition = {}) {
     TestSuite.generate(testSuiteDefinition)
-      .forEach(testSuite => testSuite.run());
+      .forEach(testSuite => testSuite.build());
   }
 
 }

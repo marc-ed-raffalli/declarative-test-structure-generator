@@ -48,15 +48,15 @@ class TestSuite extends TestBlock {
   }
 
   getRunTestBlock() {
-    return describe;
+    return TestBlock.getTestLib().describe;
   }
 
   getRunOnlyTestBlock() {
-    return describe.only;
+    return TestBlock.getTestLib().describe.only;
   }
 
   getSkipTestBlock() {
-    return describe.skip;
+    return TestBlock.getTestLib().describe.skip;
   }
 
   run() {
@@ -90,7 +90,7 @@ class TestSuite extends TestBlock {
   }
 
   _runTests() {
-    this.tests.forEach(test => test.run());
+    this.tests.forEach(test => test.build());
   }
 
 }

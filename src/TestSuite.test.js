@@ -216,15 +216,15 @@ describe('TestSuite', () => {
 
       it('calls run() on all registered tests', () => {
         testStubs = [
-          {run: sinon.spy()},
-          {run: sinon.spy()}
+          {build: sinon.spy()},
+          {build: sinon.spy()}
         ];
 
         testSuite = new TestSuite({tests: testStubs});
         testSuite._runTests();
 
         testStubs.forEach(test => {
-          expect(test.run.calledOnce).to.be.true;
+          expect(test.build.calledOnce).to.be.true;
         });
 
       });
