@@ -11,11 +11,16 @@ All breaking changes will be documented in this page.
 
 ---
 
+## 0.2.3 (beta) - 2018-05-22
+
+### Changes
+  - Moved documentation to dedicated page
+
 ## 0.2.2 (beta) - 2018-04-21
 
 ### Changes
   - Fixed test suite not called
-  
+
 ## 0.2.1 (beta) - 2018-03-28
 
 ### Changes
