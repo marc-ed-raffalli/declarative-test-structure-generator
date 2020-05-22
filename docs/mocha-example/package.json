@@ -1,0 +1,18 @@
+{
+  "name": "dtsg-mocha-example",
+  "version": "1.0.0",
+  "description": "Simple example with Mocha testing library",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "mocha -r ts-node/register src/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "chai": "^4.2.0",
+    "declarative-test-structure-generator": "^0.2.3",
+    "mocha": "^7.1.2",
+    "ts-node": "^8.10.1"
+  }
+}

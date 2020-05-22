@@ -1,0 +1,27 @@
+{
+  "name": "dtsg-jest-example",
+  "version": "1.0.0",
+  "description": "Simple example with Jest testing library",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "declarative-test-structure-generator": "^0.2.3",
+    "jest": "^26.0.1",
+    "typescript": "^3.9.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "/src/.*\\.test\\.ts$",
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ]
+  }
+}

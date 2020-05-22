@@ -1,0 +1,44 @@
+{
+  "linterOptions": {
+    "exclude": [
+      "dist",
+      "node_modules"
+    ]
+  },
+  "extends": [
+    "tslint:latest"
+  ],
+  "rules": {
+    "array-type": [
+      true,
+      "array-simple"
+    ],
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "file-name-casing": [
+      true,
+      "kebab-case"
+    ],
+    "no-implicit-dependencies": [
+      true
+    ],
+    "no-object-literal-type-assertion": false,
+    "object-literal-sort-keys": false,
+    "object-literal-key-quotes": false,
+    "one-variable-per-declaration": false,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ]
+  },
+  "jsRules": true
+}

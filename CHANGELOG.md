@@ -2,14 +2,21 @@
 
 This file documents all important changes brought to the project.
 
-**IMPORTANT:** The major version number will not be increased during the **beta** period.  
-All breaking changes will be documented in this page. 
+**IMPORTANT:** The major version number will not be increased during the **beta** period.
+All breaking changes will be documented in this page.
 
 ## origin/master
 
 *No changes at the moment*
 
 ---
+
+## 1.0.0 - 2020-05-22
+
+### Changes
+  - Refactored project to use TypeScript
+  - Removed mocha dependency
+  - Added configurable test framework
 
 ## 0.2.3 (beta) - 2018-05-22
 
