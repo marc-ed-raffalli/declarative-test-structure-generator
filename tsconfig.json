@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declarationDir": "dist/lib",
+    "outDir": "dist/lib",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictFunctionTypes": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "src/**/*.test.ts"
+  ]
+}
