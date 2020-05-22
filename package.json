@@ -1,6 +1,6 @@
 {
   "name": "declarative-test-structure-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Declaration driven test structure generator",
   "main": "dist/lib/index.js",
   "typings": "dist/lib/index.d.ts",
@@ -18,8 +18,8 @@
     "lint": "tslint -p . -c tslint.json",
     "lint:fix": "yarn lint --fix",
     "prepare": "yarn build",
-    "version" : "git add -A .",
-    "postversion" : "git push && git push --tags"
+    "version": "git add -A .",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "test",
