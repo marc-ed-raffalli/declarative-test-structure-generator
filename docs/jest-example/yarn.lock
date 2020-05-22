@@ -1079,13 +1079,6 @@ debug@^2.2.0, debug@^2.3.3:
   dependencies:
     ms "2.0.0"
 
-debug@^3.1.0:
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
-  integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
-  dependencies:
-    ms "^2.1.1"
-
 debug@^4.1.0, debug@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
@@ -1103,12 +1096,10 @@ decimal.js@^10.2.0:
   resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-10.2.0.tgz#39466113a9e036111d02f82489b5fd6b0b5ed231"
   integrity sha512-vDPw+rDgn3bZe1+F/pyEwb1oMG2XTlRVgAa6B4KccTEpYgF8w6eQllVbQcfIJnZyvzFtFpxnpGtx8dd7DJp/Rw==
 
-declarative-test-structure-generator@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/declarative-test-structure-generator/-/declarative-test-structure-generator-0.2.3.tgz#a8f1f02325ef6551a0cd2b3e059f98996fbefdf6"
-  integrity sha512-C/rPTGgvCuK3DFOrCiX0D3EqdHsKqbUxpZiWXegIOfCkXwjFFiJVz7WVa4ACHt3LroXh9LRwDxXg9D0m4zB/uA==
-  dependencies:
-    debug "^3.1.0"
+declarative-test-structure-generator@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/declarative-test-structure-generator/-/declarative-test-structure-generator-1.0.1.tgz#1d3fd762921712bfa496a38b471d4948445549d9"
+  integrity sha512-p3sNsJsK+qUeft1gA3PR7F5zaENgXGPmXS+Umav+iXLxtEjQFtFx2pp5Q92cv+nSYacQUqM1ZahyP236YTcgTA==
 
 decode-uri-component@^0.2.0:
   version "0.2.0"

@@ -13,8 +13,8 @@
 }
 ```
 
-As of version 1, it no longer packs any specific test framework.
-The API needs to be mapped using pre-built or custom mappers.
+As of version 1, the API has been refactored to be standalone, it no longer packs any specific test framework.
+The API needs to be mapped using pre-built or custom mappers (see [documentation][projectPage]).
 
 ## Installation
 

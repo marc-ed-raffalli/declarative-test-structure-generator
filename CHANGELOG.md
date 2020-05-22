@@ -11,6 +11,12 @@ All breaking changes will be documented in this page.
 
 ---
 
+## 1.0.2 - 2020-05-22
+
+### Changes
+  - Added Jasmine example
+  - Updated examples to the latest release
+
 ## 1.0.0 - 2020-05-22
 
 ### Changes

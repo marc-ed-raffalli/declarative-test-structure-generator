@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",
-    "declarative-test-structure-generator": "^0.2.3",
+    "declarative-test-structure-generator": "^1.0.1",
     "jest": "^26.0.1",
     "typescript": "^3.9.3"
   },

@@ -1,6 +1,5 @@
 'use strict';
 
-import {expect} from 'chai';
 import {api, run} from 'declarative-test-structure-generator';
 
 run(
@@ -10,20 +9,20 @@ run(
       tests: {
         'sample test 1': {
           test: () => {
-            expect(1 + 2).to.equal(3);
+            expect(1 + 2).toEqual(3);
           }
         },
         'skipped test': {
           skip: true,
           test: () => {
-            expect(1 + 2).to.equal(3);
+            expect(1 + 2).toEqual(3);
           }
         },
         'nested test suite': {
           tests: {
             'nested test': {
               test: () => {
-                expect(1 + 2).to.equal(3);
+                expect(1 + 2).toEqual(3);
               }
             }
           }
@@ -35,7 +34,7 @@ run(
         {
           name: 'sample test 1',
           test: () => {
-            expect(1 + 2).to.equal(3);
+            expect(1 + 2).toEqual(3);
           }
         },
         {
@@ -43,7 +42,7 @@ run(
           tests: {
             'nested test': {
               test: () => {
-                expect(1 + 2).to.equal(3);
+                expect(1 + 2).toEqual(3);
               }
             }
           }
@@ -57,13 +56,13 @@ run(
             {
               name: 'sample test 1',
               test: () => {
-                expect(1 + 2).to.equal(3);
+                expect(1 + 2).toEqual(3);
               }
             },
             {
               name: 'sample test 2',
               test: () => {
-                expect(1 + 2).to.equal(3);
+                expect(1 + 2).toEqual(3);
               }
             }
           ]
@@ -72,7 +71,7 @@ run(
           tests: {
             'sample test': {
               test: () => {
-                expect(1 + 2).to.equal(3);
+                expect(1 + 2).toEqual(3);
               }
             }
           }
@@ -80,5 +79,5 @@ run(
       }
     }
   },
-  {api: api.mocha}
+  {api: api.jasmine}
 );
