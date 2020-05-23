@@ -1,5 +1,3 @@
-'use strict';
-
 import {api, run} from 'declarative-test-structure-generator';
 
 run(

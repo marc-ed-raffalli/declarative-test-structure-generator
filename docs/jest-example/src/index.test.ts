@@ -1,11 +1,9 @@
-'use strict';
-
 import {api, run} from 'declarative-test-structure-generator';
 
 run(
   {
     'Object syntax': {
-      only: true,
+      // only: true,
       tests: {
         'sample test 1': {
           test: () => {

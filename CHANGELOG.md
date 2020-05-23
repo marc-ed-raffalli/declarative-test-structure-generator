@@ -11,6 +11,11 @@ All breaking changes will be documented in this page.
 
 ---
 
+## 1.0.3 - 2020-05-23
+
+### Changes
+  - Exposed interfaces `ITestConfig`, `IApiMapper`
+
 ## 1.0.2 - 2020-05-22
 
 ### Changes

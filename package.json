@@ -1,6 +1,6 @@
 {
   "name": "declarative-test-structure-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Declaration driven test structure generator",
   "main": "dist/lib/index.js",
   "typings": "dist/lib/index.d.ts",
@@ -26,6 +26,9 @@
     "automation",
     "generator",
     "bdd",
+    "Jest",
+    "Jasmine",
+    "Mocha",
     "TypeScript",
     "js"
   ],

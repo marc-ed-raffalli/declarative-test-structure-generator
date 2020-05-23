@@ -8,8 +8,21 @@
 
 ```js
 {
-  name: 'admin CAN create',
-  test: () => { /* test code here */ }
+  'Object syntax': {
+    tests: {
+      'sample test 1': {
+        test: () => {
+          expect(1 + 2).toEqual(3);
+        }
+      },
+      'skipped test': {
+        skip: true,
+        test: () => {
+          expect(5 + 8).toEqual(13);
+        }
+      }
+    }
+  }
 }
 ```
 
@@ -27,7 +40,7 @@ yarn add -D declarative-test-structure-generator
 
 ## TypeScript
 
-As of version 1, the library package has been re-written in typescript and exposes the types.
+As of version 1, the library package has been re-written in typescript and provides the type definitions.
 
 ## Documentation
 

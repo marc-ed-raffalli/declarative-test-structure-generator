@@ -1,5 +1,3 @@
-'use strict';
-
 import {expect} from 'chai';
 import {api, run} from 'declarative-test-structure-generator';
 
