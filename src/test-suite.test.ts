@@ -16,12 +16,10 @@ describe('TestSuite', () => {
 
   beforeEach(() => {
     const
-      callFn = function (fn: fnType) {
-        // @ts-ignore
+      callFn = function (this: any, fn: fnType) {
         fn.call(this);
       },
-      callNameFn = function (name: string, fn: fnType) {
-        // @ts-ignore
+      callNameFn = function (this: any, name: string, fn: fnType) {
         fn.call(this);
       }
     ;
@@ -100,9 +98,10 @@ describe('TestSuite', () => {
       testSuiteProps.after = jest.fn();
       testSuiteProps.afterEach = jest.fn();
 
-      new TestSuite(apiWrapperMock, testSuiteProps).run();
+      new TestSuite(apiWrapperMock, testSuiteProps).run({});
 
-      hooks.forEach((key) => assertApiCalledWith(key, testSuiteProps[key]));
+      // callback bound to context, cannot do equality
+      hooks.forEach((key) => assertApiCalledWith(key, expect.any(Function)));
     });
 
     it('calls api wrapper with hooks array', () => {
@@ -111,35 +110,39 @@ describe('TestSuite', () => {
       testSuiteProps.after = [jest.fn(), jest.fn()];
       testSuiteProps.afterEach = [jest.fn(), jest.fn()];
 
-      new TestSuite(apiWrapperMock, testSuiteProps).run();
+      new TestSuite(apiWrapperMock, testSuiteProps).run({});
 
-      hooks.forEach((key) => assertApiCalledWith(key, testSuiteProps[key]));
+      // callback bound to context, cannot do equality
+      hooks.forEach((key) => assertApiCalledWith(key, expect.any(Function)));
     });
 
     it('supports setting context in hooks', () => {
+      let checks = 0;
       testSuiteProps = {
         ...testSuiteProps,
-        before() {
-          // @ts-ignore
+        before(this: any) {
           this.foo = 'foo';
+          checks++;
         },
-        beforeEach() {
-          // @ts-ignore
+        beforeEach(this: any) {
           this.bar = 'bar';
+          checks++;
         },
         tests: [{
           name: 'Foo test',
           test() {
             expect(this).toMatchObject({foo: 'foo', bar: 'bar'});
+            checks++;
           }
         }]
       };
 
-      new TestSuite(apiWrapperMock, testSuiteProps).run();
+      new TestSuite(apiWrapperMock, testSuiteProps).run({});
+      expect(checks).toEqual(3);
     });
 
     it('calls api wrapper with definition', () => {
-      new TestSuite(apiWrapperMock, testSuiteProps).run();
+      new TestSuite(apiWrapperMock, testSuiteProps).run({});
 
       expect(apiWrapperMock.describe).toHaveBeenCalledWith(testSuiteProps, expect.any(Function));
     });

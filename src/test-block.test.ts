@@ -25,9 +25,9 @@ describe('TestBlock', () => {
     it('calls api wrapper with definition', () => {
       const def = {name, test: fn};
 
-      new TestBlock(apiWrapperMock, def).run();
+      new TestBlock(apiWrapperMock, def).run({});
 
-      expect(apiWrapperMock.it).toHaveBeenCalledWith(def, fn);
+      expect(apiWrapperMock.it).toHaveBeenCalledWith(def, expect.any(Function));
       expect(fn).not.toHaveBeenCalled();
     });
 

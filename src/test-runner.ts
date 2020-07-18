@@ -21,6 +21,6 @@ export class TestRunner {
   }
 
   run() {
-    this.testSuites.forEach((def) => def.run());
+    this.testSuites.forEach((def) => def.run({}));
   }
 }

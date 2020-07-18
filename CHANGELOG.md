@@ -11,6 +11,13 @@ All breaking changes will be documented in this page.
 
 ---
 
+## 1.1.0 - 2020-07-18
+
+### Changes
+  - Added support for context in hooks and test through `this`
+  - Exposed interfaces `ITestSuite`, `ITest`
+  - Fixed typings for asynchronous hooks and test functions
+
 ## 1.0.3 - 2020-05-23
 
 ### Changes

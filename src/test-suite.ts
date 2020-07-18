@@ -39,7 +39,7 @@ export class TestSuite {
     return this.props;
   }
 
-  public run() {
+  public run(context: any) {
     // tslint:disable-next-line:no-this-assignment
     const {api, props, tests, hooks} = this;
 
@@ -47,10 +47,10 @@ export class TestSuite {
       Object.entries(hooks)
         .forEach(
           ([hookName, hookFnList]) => hookFnList
-            .forEach((hook) => api[hookName as keyof ITestSuiteHooks](hook))
+            .forEach((hook) => api[hookName as keyof ITestSuiteHooks](hook.bind(context)))
         );
 
-      tests.forEach(test => test.run());
+      tests.forEach(test => test.run(context));
     });
   }
 

@@ -1,8 +1,10 @@
 import {fnType} from './shared';
 import {ITestSuiteHooks} from './test-suite';
 
-export type itFn = fnType | fnType<Promise<any>> | ((done: fnType) => void);
-export type hookType = fnType | fnType<Promise<any>> | ((done: fnType) => void);
+type doneOrPromiseType = (() => void) | ((done: fnType) => void) | fnType<Promise<any>>;
+
+export type itFn = doneOrPromiseType;
+export type hookType = doneOrPromiseType;
 
 type describeType = (name: string, test: fnType) => void;
 type itType = (name: string, test: itFn) => void;
